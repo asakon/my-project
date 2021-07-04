@@ -2,7 +2,8 @@
 
 ## Project setup
 ```
-yarn install
+npm install -g @vue/cli
+vue create my-project
 ```
 
 ### Compiles and hot-reloads for development
@@ -20,5 +21,3 @@ yarn build
 yarn lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
