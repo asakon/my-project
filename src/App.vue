@@ -1,9 +1,13 @@
 <template>
   <div id="app">
+    <Counter name="C1" :initCount="5" @emitUp="getEvent" />
+    <Counter name="C2" :initCount="10" @emitUp="getEvent" />
+    <p>
+      EventStack:
+      {{ stack }}
+    </p>
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <Counter name="C1" :initCount="5" />
-    <Counter name="C2" :initCount="10" />
   </div>
 </template>
 
@@ -16,6 +20,16 @@ export default {
   components: {
     HelloWorld,
     Counter
+  },
+  data() {
+    return {
+      stack: []
+    }
+  },
+  methods: {
+    getEvent(payload) {
+      this.stack.push(payload)
+    }
   }
 }
 </script>
