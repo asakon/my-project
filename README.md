@@ -21,3 +21,15 @@ yarn build
 yarn lint
 ```
 
+## memo
+
+### History API
+
+「戻る/進むの履歴スタックにパスを積むことができる」
+
+### SPA
+
+「疑似的なページ遷移」
+
+### Vue Router
+
