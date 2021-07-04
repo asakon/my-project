@@ -21,6 +21,10 @@ const routes = [
   {
     path: '/count',
     component: () => import(/* webpackChunkName: "count" */ '@/views/Count.vue')
+  },
+  {
+    path: '/paging/:page',
+    component: () => import(/* webpackChumgName: "paging" */ '@/views/Paging.vue')
   }
 ]
 
