@@ -2,27 +2,26 @@
   <div id="app">
     <Counter name="C1" :initCount="5" @emitUp="getEvent" />
     <Counter name="C2" :initCount="10" @emitUp="getEvent" />
-    <p>
-      EventStack:
-      {{ stack }}
-    </p>
+    <p>{{ primitiveStore.$data.globalCount }}</p>
+    <input type="text" v-model="primitiveStore.$data.globalCount">
   </div>
 </template>
 
 <script>
 import Counter from '@/components/Counter.vue'
+import primitiveStore from '@/primitiveStore.js'
 export default {
   components: {
     Counter
   },
   data() {
     return {
-      stack: []
+      primitiveStore
     }
   },
   methods: {
-    getEvent(payload) {
-      this.stack.push(payload)
+    getEvent() {
+      this.primitiveStore.$data.globalCount++;
     }
   }
 }
