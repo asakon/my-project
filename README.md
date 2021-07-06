@@ -33,3 +33,10 @@ yarn lint
 
 ### Vue Router
 
+### Vuex
+
+vue add vuex
+
+グローバルなstate
+
+インターフェイスはMutationsに限定されている
